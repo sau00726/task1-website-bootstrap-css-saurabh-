@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechVision Computer Classes</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f9fafb;
+    margin:0;
+}
+
+/* HEADER */
+header{
+    background:#020617;
+    padding:18px 0;
+    box-shadow:0 3px 6px rgba(0,0,0,0.2);
+    position:relative;
+}
+.logo{
+    color:#38bdf8;
+    font-size:26px;
+    font-weight:700;
+}
+.menu a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    font-weight:500;
+    transition:0.3s;
+}
+.menu a:hover{color:#22d3ee;}
+
+/* OFFCANVAS */
+.offcanvas-custom{
+    background:#020617;
+    color:white;
+}
+.offcanvas-custom a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:12px 0;
+    font-size:18px;
+    transition:0.3s;
+}
+.offcanvas-custom a:hover{
+    color:#22d3ee;
+    font-weight:600;
+}
+
+/* HERO */
+.hero{
+    background:linear-gradient(120deg,#0ea5e9,#6366f1);
+    padding:120px 20px;
+    color:white;
+}
+.hero h1{
+    font-size:50px;
+    font-weight:700;
+}
+.hero p{
+    font-size:20px;
+    margin-top:15px;
+    color:#e0f2fe;
+}
+.hero-btn{
+    display:inline-block;
+    margin-top:25px;
+    background:white;
+    color:#020617;
+    padding:12px 30px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+.hero-btn:hover{background:#22d3ee;color:white;transform:translateY(-3px);}
+
+/* COURSES */
+.course-box{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+    cursor:pointer;
+}
+.course-box:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.15);
+}
+.course-box img{width:70px;margin-bottom:20px;}
+.course-box h4{font-weight:600;margin-bottom:10px;}
+.course-box p{color:#6b7280;font-size:14px;margin-bottom:15px;}
+.course-box button{
+    border-radius:50px;
+    padding:8px 20px;
+    font-weight:600;
+    transition:0.3s;
+}
+.course-box button:hover{background:#0ea5e9;color:white;border-color:#0ea5e9;}
+
+/* FEATURES */
+.features{
+    padding:70px 20px;
+    background:#eef2ff;
+}
+.feature-box{
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+.feature-box:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 25px rgba(0,0,0,0.12);
+}
+.feature-box img{
+    width:60px;
+    margin-bottom:15px;
+}
+
+/* ABOUT */
+.about{
+    background:#020617;
+    color:white;
+    padding:70px 20px;
+}
+.about h2{font-weight:700;margin-bottom:20px;}
+.about p{line-height:1.6;color:#cbd5e1;}
+
+/* FOOTER */
+footer{
+    background:#020617;
+    color:white;
+    text-align:center;
+    padding:20px 0;
+    font-size:14px;
+}
+
+/* CAROUSEL */
+.carousel-inner img{
+    border-radius:20px;
+    height:350px;
+    object-fit:cover;
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-6 col-md-4 logo">TechVision Classes</div>
+      <div class="col-md-8 d-none d-md-block text-end menu">
+        <a href="index.html">Home</a>
+        <a href="course-details.html">Courses</a>
+        <a href="enroll.html">Enroll</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Sign Up</a>
+        <button class="btn btn-outline-light ms-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">Menu</button>
+      </div>
+      <div class="col-6 d-md-none text-end">
+        <!-- Mobile menu button -->
+        <button class="btn btn-outline-light" 
+                type="button" 
+                data-bs-toggle="offcanvas" 
+                data-bs-target="#mobileMenu" 
+                aria-controls="mobileMenu">
+          ☰
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- OFFCANVAS MENU -->
+<div class="offcanvas offcanvas-end offcanvas-custom" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+<div class="offcanvas-header">
+<h5 class="offcanvas-title" id="mobileMenuLabel">TechVision</h5>
+<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+</div>
+<div class="offcanvas-body">
+<a href="index.html">Home</a>
+<a href="course-details.html">Courses</a>
+<a href="enroll.html">Enroll</a>
+<a href="login.html">Login</a>
+<a href="signup.html">Sign Up</a>
+<hr class="text-white">
+<a href="brochure/TechVision_Brochure.pdf" class="btn btn-outline-light w-100" download>Download Brochure</a>
+</div>
+</div>
+<!-- HERO -->
+<section class="hero">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-md-6">
+<h1>Learn Programming & IT Skills</h1>
+<p>Professional training with live projects & placement support.</p>
+<a href="enroll.html" class="hero-btn">Enroll Now</a>
+<a href="brochure/TechVision_Brochure.pdf" class="hero-btn ms-3" download>Download Brochure</a>
+</div>
+<div class="col-md-6">
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+<div class="carousel-inner">
+<div class="carousel-item active">
+<img src="images/slide1.jpg" class="d-block w-100" alt="Slide 1">
+</div>
+<div class="carousel-item">
+<img src="images/slide2.jpeg" class="d-block w-100" alt="Slide 2">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- COURSES -->
+<section class="container my-5">
+  <div class="row g-4 text-center">
+    <!-- Web Development -->
+    <div class="col-md-4">
+      <div class="course-box" onclick="location.href='web.html'">
+        <img src="images/web1.jpeg" alt="Web Development">
+        <h4>Web Development</h4>
+        <p>HTML, CSS, JS, Bootstrap & Projects</p>
+        <button class="btn btn-outline-primary" onclick="location.href='web.html'">View Details</button>
+      </div>
+    </div>
+
+    <!-- Python Programming -->
+    <div class="col-md-4">
+      <div class="course-box" onclick="location.href='python.html'">
+        <img src="images/python.jpeg" alt="Python Programming">
+        <h4>Python Programming</h4>
+        <p>Core + Advanced Python Projects</p>
+        <button class="btn btn-outline-primary" onclick="location.href='python.html'">View Details</button>
+      </div>
+    </div>
+
+    <!-- Data Analytics -->
+    <div class="col-md-4">
+      <div class="course-box" onclick="location.href='data.html'">
+        <img src="images/data.jpeg" alt="Data Analytics">
+        <h4>Data Analytics</h4>
+        <p>Excel, SQL, Power BI & Case Studies</p>
+        <button class="btn btn-outline-primary" onclick="location.href='data.html'">View Details</button>
+      </div>
+    </div>
+
+<!-- FEATURES -->
+<section class="features">
+<div class="container">
+<div class="row text-center mb-5">
+<h2>Our Features</h2>
+</div>
+<div class="row g-4 text-center">
+<div class="col-md-3">
+<div class="feature-box">
+<img src="images/expert.jpeg" alt="Expert Faculty">
+<h5>Expert Faculty</h5>
+</div>
+</div>
+<div class="col-md-3">
+<div class="feature-box">
+<img src="images/placement.jpeg" alt="Placement Support">
+<h5>Placement Support</h5>
+</div>
+</div>
+<div class="col-md-3">
+<div class="feature-box">
+<img src="images/certification.jpeg" alt="Certification">
+<h5>Certification</h5>
+</div>
+</div>
+<div class="col-md-3">
+<div class="feature-box">
+<img src="images/data.jpeg" alt="Live Projects">
+<h5>Live Projects</h5>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-md-6">
+<h2>Why Choose Us?</h2>
+<p>We provide practical training with live projects, expert faculty, and placement support to help you build your IT career with confidence.</p>
+<ul>
+<li>✔ Certified Trainers</li>
+<li>✔ Live Projects</li>
+<li>✔ Placement Support</li>
+<li>✔ Affordable Fees</li>
+</ul>
+</div>
+<div class="col-md-6 text-center">
+<img src="images/expert.jpeg" class="img-fluid rounded-4" alt="About Us">
+</div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+© 2025 TechVision Computer Classes | All Rights Reserved
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
